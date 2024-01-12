@@ -1,0 +1,54 @@
+body {
+	font-family: Roboto, sans-serif;
+	color: #fff;
+	background-color: #222;
+}
+
+textarea,
+select,
+button {
+	background-color: #333;
+	color: #fff;
+	border: 0;
+	padding: 8px;
+}
+
+option {
+	background-color: #333;
+	cursor: pointer;
+}
+
+select {
+	cursor: pointer;
+}
+
+button {
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #444;
+}
+
+*:disabled {
+	opacity: 0.5;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.range-container {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.textarea-container,
+.select-container {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
