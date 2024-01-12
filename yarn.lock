@@ -1143,13 +1143,6 @@ globby@^11.1.0:
     merge2 "^1.4.1"
     slash "^3.0.0"
 
-grace-speak@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/grace-speak/-/grace-speak-2.1.1.tgz#8d3855579be59e85782b8e6ca1607f994b560efb"
-  integrity sha512-oV0+sh2MdWKTjXqIq7Rj4ywMzGAaq9qDq6R1j8PjIuyPr8g24VPp6/Rvpa089zF/WE6t6NTRpAiozuF5DXWbNg==
-  dependencies:
-    js-cool "^4.6.0"
-
 graphemer@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/graphemer/-/graphemer-1.4.0.tgz#fb2f1d55e0e3a1849aeffc90c4fa0dd53a0e66c6"
@@ -1223,18 +1216,6 @@ isexe@^2.0.0:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==
 
-js-cool@^4.6.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/js-cool/-/js-cool-4.7.0.tgz#19b47b2e4adf046f54c7d2d1717607f5f63efaf6"
-  integrity sha512-8H3rUxI9xNCkSFGMsBCcmiMQtrSZsGG4hjNYAZUta/xKvjtHboPPDEGw4TxaLU3x7zxj2akvjlPFm5Ki+Om5EA==
-  dependencies:
-    load-source "^1.2.0"
-    mount-css "^1.2.0"
-    mount-image "^1.2.0"
-    mount-script "^1.2.0"
-    mount-style "^1.2.0"
-    use-downloads "^1.1.0"
-
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -1286,16 +1267,6 @@ levn@^0.4.1:
   dependencies:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
-
-load-source@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/load-source/-/load-source-1.2.0.tgz#fa0ba4c478175085a717bbd7cce35364a54cbd5c"
-  integrity sha512-2pgerVx7egVvqEm2TfYr3GOSX7tbmAEs6Kt3gDRODnexC2xfLOB/hB9wP8+MFBlo2tD/GLX1MgQ1IOZ4jbtzaw==
-  dependencies:
-    mount-css "1.2.0"
-    mount-image "1.2.0"
-    mount-script "1.2.0"
-    mount-style "1.2.0"
 
 locate-path@^6.0.0:
   version "6.0.0"
@@ -1356,26 +1327,6 @@ minimatch@^3.0.5, minimatch@^3.1.1, minimatch@^3.1.2:
   integrity sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==
   dependencies:
     brace-expansion "^1.1.7"
-
-mount-css@1.2.0, mount-css@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/mount-css/-/mount-css-1.2.0.tgz#ffc8c2f42c2703c4dd6750254090f737926dbfe8"
-  integrity sha512-LGm7ucjo+3NsXQqxHH03v9jmAs00/JR1CsqO6IC9gm7zkZjWjki5FLM+Ld9MeTfuPPXXgMj7m1yzz5NA13Ye1g==
-
-mount-image@1.2.0, mount-image@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/mount-image/-/mount-image-1.2.0.tgz#4ebfed0e7e44cd2a44ce0c01c9c39a7c066296fe"
-  integrity sha512-NQsmg+Zjnb4DZNvJtwuFbN3ekS+tJxyfbYuTk9PqdmtRpHv0RjajEnzCRXNUIZ7Epbe3iTHhRFJI/zHClmirQA==
-
-mount-script@1.2.0, mount-script@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/mount-script/-/mount-script-1.2.0.tgz#833d4e1bab81ba63bed5a1409c853189ee285a9c"
-  integrity sha512-Zi41a5RITaRU0Uzkgih/yzUfsxWDFLjM8ap37Jjic1jH2ob7N5yOzsj6zhSJxc3JC84456kgLFd5SLdYob2eJQ==
-
-mount-style@1.2.0, mount-style@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/mount-style/-/mount-style-1.2.0.tgz#72bfc279b4380612008dddbd6de8747563a90ed7"
-  integrity sha512-INP8yaVjMy6kl2fbM43UrGWxqCZIKMO35pNW9nL0EiS7jNYbZkXghf7Nt+ls2VyqOZlEONo6h4WtnxNS41By6A==
 
 ms@2.1.2:
   version "2.1.2"
@@ -1677,11 +1628,6 @@ uri-js@^4.2.2:
   integrity sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
   dependencies:
     punycode "^2.1.0"
-
-use-downloads@^1.1.0:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/use-downloads/-/use-downloads-1.5.1.tgz#832d12fe612e1c4379f2af8f600c1b6016d18cef"
-  integrity sha512-DOAlnvDzbXJLo2D+jMQ87qKhNBiV7p0RzDjDHLCmlyTOA6iVytQuyvVDcTK4UYz7U907YJkaOieWxXHGWy6+tg==
 
 vite@^5.0.8:
   version "5.0.11"

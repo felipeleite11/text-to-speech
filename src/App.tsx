@@ -1,7 +1,7 @@
 import './App.css'
 
 import { NoLib } from './NoLib'
-import { WithLib } from './WithLib'
+import { UsingHook } from './UsingHook'
 
 function App() {
 	return (
@@ -9,8 +9,8 @@ function App() {
 			<h1>Sem library</h1>
 			<NoLib />
 
-			<h1>Com library grace-speak</h1>
-			<WithLib />
+			<h1>Com hook</h1>
+			<UsingHook />
 		</main>
 	)
 }

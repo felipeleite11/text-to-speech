@@ -3,15 +3,15 @@ import { useEffect, useState } from 'react'
 const speech = window.speechSynthesis
 
 export function NoLib() {
-	const [text, setText] = useState('meu texto aqui')
-	const [voicesList, setVoicesList] = useState<SpeechSynthesisVoice[]>([])
+	const [text, setText] = useState('Este texto está sendo lido com recursos nativos do navegador')
+	const [voicesList, setVoicesList] = useState<SpeechSynthesisVoice[]|null>(null)
 	const [selectedVoice, setSelectedVoice] = useState(2)
 	const [rate, setRate] = useState(1.0)
 	const [volume, setVolume] = useState(1)
 	const [speaking, setSpeaking] = useState(false)
 
 	function handleSpeak() {
-		if (text) {
+		if (text && voicesList) {
 			try {
 				setSpeaking(true)
 
@@ -34,6 +34,12 @@ export function NoLib() {
 
 		setVoicesList(allowedVoices.filter(v => v.name.includes('Brazil')))
 	}, [])
+
+	if(!voicesList) {
+		return (
+			<p>Carregando...</p>
+		)
+	}
 
 	return (
 		<div className="container">
@@ -78,7 +84,7 @@ export function NoLib() {
 			</div>
 
 			<div className="select-container">
-				<label htmlFor="rate">Texto</label>
+				<label htmlFor="rate">Vozes</label>
 				<select 
 					value={selectedVoice} 
 					onChange={(e: any) => {
