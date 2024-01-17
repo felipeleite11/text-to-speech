@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 const speech = window.speechSynthesis
 
-export function NoLib() {
+export function SpeechNoLib() {
 	const [text, setText] = useState('Este texto está sendo lido com recursos nativos do navegador')
 	const [voicesList, setVoicesList] = useState<SpeechSynthesisVoice[]|null>(null)
 	const [selectedVoice, setSelectedVoice] = useState(2)
@@ -43,21 +43,18 @@ export function NoLib() {
 
 	return (
 		<div className="container">
-			<div className="textarea-container">
-				<label htmlFor="rate">Texto</label>
-				<textarea
-					id="text"
-					value={text}
-					onChange={e => { setText(e.target.value) }}
-					style={{
-						height: 80
-					}}
-					placeholder="Digite..."
-					disabled={speaking}
-				>
-					Meu teste aqui
-				</textarea>
-			</div>
+			<textarea
+				id="text"
+				value={text}
+				onChange={e => { setText(e.target.value) }}
+				style={{
+					height: 80
+				}}
+				placeholder="Digite..."
+				disabled={speaking}
+			>
+				Meu teste aqui
+			</textarea>
 
 			<div className="range-container">
 				<label htmlFor="rate">Rate: ({rate})</label>
@@ -83,20 +80,17 @@ export function NoLib() {
 				/>
 			</div>
 
-			<div className="select-container">
-				<label htmlFor="rate">Vozes</label>
-				<select 
-					value={selectedVoice} 
-					onChange={(e: any) => {
-						setSelectedVoice(Number(e.target.value))
-					}}
-					disabled={speaking}
-				>
-					{voicesList.map((voice, idx) => (
-						<option value={idx} key={voice.name}>{voice.name}</option>
-					))}
-				</select>
-			</div>
+			<select 
+				value={selectedVoice} 
+				onChange={(e: any) => {
+					setSelectedVoice(Number(e.target.value))
+				}}
+				disabled={speaking}
+			>
+				{voicesList.map((voice, idx) => (
+					<option value={idx} key={voice.name}>{voice.name}</option>
+				))}
+			</select>
 
 			<button 
 				onClick={handleSpeak}
