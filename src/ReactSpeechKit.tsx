@@ -49,7 +49,7 @@ export function ReactSpeechKit() {
 				})}
 				disabled={speaking}
 			>
-				{speaking ? 'Speaking' : 'Speak'}
+				{speaking ? 'Falando' : 'Falar'}
 			</button>
 		</div>
 	)

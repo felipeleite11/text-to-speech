@@ -7,26 +7,38 @@ import { ReactSpeechKit } from './ReactSpeechKit'
 
 function App() {
 	return (
-		<main>
+		<main className="mx-8 mb-10 flex flex-col gap-4">
 			<h1>TEXT TO SPEECH</h1>
 
-			<h2>Sem library</h2>
-			<SpeechNoLib />
+			<div className="grid grid-cols-3 gap-8">
+				<div className="border p-3 rounded-md border-gray-600">
+					<h2>Sem library</h2>
+					<SpeechNoLib />
+				</div>
 
-			<h2>Sem library, com hook</h2>
-			<SpeechUsingHook />
+				<div className="border p-3 rounded-md border-gray-600">
+					<h2>Sem library, com hook</h2>
+					<SpeechUsingHook />
+				</div>
+			</div>
 
-			<h1>
-				SPEECH RECOGNITION
-				<span style={{ color: 'red' }}> (only works in Google Chrome)</span>
-			</h1>
+			<h1>SPEECH TO TEXT (RECOGNITION)</h1>
 
-			<h2>Sem library</h2>
-			<RecognitionNoLib />
+			<div className="grid grid-cols-3 gap-8">
+				<div className="border p-3 rounded-md border-gray-600">
+					<h2>
+						Sem library 
+						<span className="text-red-500"> (ONLY IN GOOGLE CHROME)</span>
+					</h2>
+					<RecognitionNoLib />
+				</div>
 
-			<h1>React Speech Kit</h1>
-			<h2>Recognition and Speech</h2>
-			<ReactSpeechKit />
+				<div className="border p-3 rounded-md border-gray-600">
+					<h1>Library React Speech Kit</h1>
+					<h2>Recognition and Speech</h2>
+					<ReactSpeechKit />
+				</div>
+			</div>
 		</main>
 	)
 }

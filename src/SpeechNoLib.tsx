@@ -20,7 +20,9 @@ export function SpeechNoLib() {
 				ut.voice = voicesList[selectedVoice]
 				ut.rate = rate
 				ut.volume = volume
-				ut.onend = () => { setSpeaking(false) }
+				ut.onend = () => { 
+					setSpeaking(false) 
+				}
 
 				speech.speak(ut)
 			} catch(e) {

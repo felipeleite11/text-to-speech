@@ -40,9 +40,11 @@ export function RecognitionNoLib() {
 	recog = new Recognition()
 	recog.lang = language
 	recog.onstart = () => { console.log('Start recognition') }
+	recog.onaudiostart = () => { console.log('Start recording') }
+	recog.onaudioend = () => { console.log('End recording') }
 	recog.onend = () => { console.log('Finish recognition') }
 	recog.onerror = (e: any) => { console.log('Error', e) }
-	recog.onresult = (e: SpeechRecognitionEvent) => { 
+	recog.onresult = (e: any) => { 
 		const text = e.results[0][0].transcript
 
 		setResult(text)
@@ -50,7 +52,7 @@ export function RecognitionNoLib() {
 
 	return (
 		<div className="container">
-			<select id="" onChange={(e: any) => {
+			<select onChange={(e: any) => {
 				setLanguage(e.target.value)
 			}}>
 				<option value="pt_BR">Português</option>
@@ -70,9 +72,7 @@ export function RecognitionNoLib() {
 				<p>SpeechRecognition não habilitado!</p>
 			)}
 
-			{result && (
-				<p>{result}</p>
-			)}
+			<textarea className="h-24" readOnly placeholder="Saída..." value={result || ''} />
 		</div>
 	)
 }
