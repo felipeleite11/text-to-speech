@@ -36,13 +36,13 @@ export function RecognitionNoLib() {
 		recog.stop()
 	}
 
-	let recog: Recognition
+	let recog: SpeechRecognition
 	recog = new Recognition()
 	recog.lang = language
 	recog.onstart = () => { console.log('Start recognition') }
 	recog.onend = () => { console.log('Finish recognition') }
 	recog.onerror = (e: any) => { console.log('Error', e) }
-	recog.onresult = (e: RecognitionResult) => { 
+	recog.onresult = (e: SpeechRecognitionEvent) => { 
 		const text = e.results[0][0].transcript
 
 		setResult(text)

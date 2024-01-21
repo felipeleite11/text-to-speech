@@ -6,7 +6,7 @@ export function SpeechUsingHook() {
 	const { speak, isSpeaking } = useVoice()
 
 	const [text, setText] = useState('Este texto está sendo lido utilizando React Hooks')
-	const [rate, setRate] = useState(3.0)
+	const [rate, setRate] = useState(1.7)
 
 	function handleSpeak() {
 		speak(text, {

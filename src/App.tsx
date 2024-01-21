@@ -3,6 +3,7 @@ import './App.css'
 import { SpeechNoLib } from './SpeechNoLib'
 import { SpeechUsingHook } from './SpeechUsingHook'
 import { RecognitionNoLib } from './RecognitionNoLib'
+import { ReactSpeechKit } from './ReactSpeechKit'
 
 function App() {
 	return (
@@ -12,17 +13,20 @@ function App() {
 			<h2>Sem library</h2>
 			<SpeechNoLib />
 
-			<h2>Com hook</h2>
+			<h2>Sem library, com hook</h2>
 			<SpeechUsingHook />
 
 			<h1>
 				SPEECH RECOGNITION
 				<span style={{ color: 'red' }}> (only works in Google Chrome)</span>
-				<span style={{ fontSize: 9 }}>Para funcionar, remover SpeechNoLib e SpeechUsingHook do arwuivo App.tsx.</span>
 			</h1>
 
 			<h2>Sem library</h2>
 			<RecognitionNoLib />
+
+			<h1>React Speech Kit</h1>
+			<h2>Recognition and Speech</h2>
+			<ReactSpeechKit />
 		</main>
 	)
 }
